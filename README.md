@@ -29,8 +29,8 @@ You need get key in Google Cloud Platform - Google Maps https://developers.googl
 # app.component.ts set your google maps key
  'API_KEY_FOR_BROWSER_RELEASE': '(ENTER YOUR KEY HERE)',
 # config.xml
-<preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="(ENTER YOUR KEY HERE)" />
-<preference name="GOOGLE_MAPS_IOS_API_KEY" value="(ENTER YOUR KEY HERE)" />
+name="GOOGLE_MAPS_ANDROID_API_KEY" value="(ENTER YOUR KEY HERE)" 
+name="GOOGLE_MAPS_IOS_API_KEY" value="(ENTER YOUR KEY HERE)"
 
 # Commands
 npm install 
