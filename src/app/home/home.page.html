@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="bg-colorB">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Helping People Together
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-color">
+
+  <div align="center" style="background-color: #33b5e5;">
+    <img align="center" src="../../assets/home.png">
+  </div>
+
+  <div class="card-container">
+    <div class="card primary" routerLink="/associacoes">
+      <div class="icon-card">
+        <ion-icon name="heart-outline"></ion-icon>
+      </div>
+      <div class="info-column">
+        <div class="title">
+          Associações
+        </div>
+      </div>
+    </div>
+    <div class="card primary" routerLink="/cadastroassociacao">
+      <div class="icon-card">
+        <ion-icon name="business-outline"></ion-icon>
+      </div>
+      <div class="info-column">
+        <div class="title">
+          Cad. Associações
+        </div>
+      </div>
+    </div>
+
+    <div class="card primary" routerLink="/pontodeauxilio">
+      <div class="icon-card">
+        <ion-icon name="restaurant-outline"></ion-icon>
+      </div>
+      <div class="info-column">
+        <div class="title">
+          Ponto de auxílio
+        </div>
+      </div>
+    </div>
+ 
+
+    <div class="card primary" routerLink="/cadastropontodeauxilio">
+      <div class="icon-card">
+        <ion-icon name="location-outline"></ion-icon>
+      </div>
+      <div class="info-column">
+        <div class="title">
+          Cad. Ponto de auxílio
+        </div>
+      </div>
+    </div>
+   
+      <div class="card primary" routerLink="/necessitado">
+        <div class="icon-card">
+          <ion-icon name="restaurant-outline"></ion-icon>
+        </div>
+        <div class="info-column">
+          <div class="title">
+            Necessitado </div>
+        </div>
+      </div>
+    <div class="card primary" routerLink="/cadastronecessitado">
+      <div class="icon-card">
+        <ion-icon name="person-add-outline"></ion-icon>
+      </div>
+      <div class="info-column">
+        <div class="title">
+          Cad. Necessitado
+        </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+
+</ion-content>

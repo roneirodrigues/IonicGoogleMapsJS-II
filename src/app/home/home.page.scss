@@ -1,0 +1,100 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.sIcon {
+  font-size: 1.7em;
+}
+
+.bgBt {
+  text-transform: capitalize;
+} 
+.cards {
+  background: #cef3ff;
+  --background: #cef3ff;
+}
+#mapa {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  border-radius: 50%; /* CSS3 */
+  -moz-border-radius: 10px; /* Firefox */
+  -webkit-border-radius: 10px; /* Safari, Chrome */
+  overflow: hidden;
+}
+
+
+
+ 
+
+.card-container {
+  text-align: center;
+  padding: 15px;
+}
+
+.card {
+  //font-family: "Segoe UI", "Helvetica Neue", "Droid Sans", "Arial", "Tahoma",    "Geneva", "Sans-serif";
+  background: #fff;
+  display: inline-block;
+  margin: 2px;
+  position: relative;
+  padding: 2px;
+  width: 98%;
+  box-sizing: border-box;
+  height: 70px;
+  border-radius: 5px;
+  
+}
+
+.card.primary {
+  color: #fff;
+background: #33b5e5;
+}
+.primary:active {
+  outline: none;
+}
+
+.icon-card {
+  opacity: 0.4;
+  font-size: 4em;
+  margin-left: 60%;
+  margin-top: 0%;
+}
+
+.card .info-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: -55px;
+  margin-left: 5px;
+  height: 100%;
+  box-sizing: border-box;
+  float: left;
+  text-align: left;
+}
+

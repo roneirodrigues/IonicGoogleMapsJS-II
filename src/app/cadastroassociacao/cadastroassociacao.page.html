@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar class="bg-colorToolbarAzul">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" size="large"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end"> Cadastro Associação
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon size="large" name="business-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-colforAzul">
+
+  
+    <div *ngIf="parametro == 'Atualizar'" id="map_canvas"></div>
+
+  
+  <ion-grid *ngIf="parametro != 'Atualizar'">
+    <ion-row justify-content-around>
+      <ion-col style="text-align: center;">
+        <ion-icon class="sIcon" color="primary" name="business-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input [(ngModel)]="cadastroAssociacao.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">CNPJ</ion-label>
+      <ion-input [(ngModel)]="cadastroAssociacao.cnpj"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Responsável</ion-label>
+      <ion-input [(ngModel)]="cadastroAssociacao.responsavel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">CPF - Responsável</ion-label>
+      <ion-input [(ngModel)]="cadastroAssociacao.cpfresponsavel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Endereço</ion-label>
+      <ion-input [(ngModel)]="cadastroAssociacao.endereco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nro</ion-label>
+      <ion-input [(ngModel)]="cadastroAssociacao.nro"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <p>UF</p>
+      </ion-label>
+      <ion-select [(ngModel)]="cadastroAssociacao.uf" (ionChange)="selectCidade(cadastroAssociacao.uf)">
+        <ion-select-option *ngFor="let est of ufShow" [value]="est.estado">{{est.uf}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div style="padding: 10px 15px 0px 16px">
+      <small>Cidade</small>
+      <input [(ngModel)]="cadastroAssociacao.cidade" class="iptDisabled pksInput" list="browsers" name="browser"
+        [disabled]="!cadastroAssociacao.uf">
+      <datalist id="browsers">
+        <option *ngFor="let item of cidadesShow">{{item.cidade}}</option>
+      </datalist>
+    </div>
+    <hr color="#dedede">
+
+    <ion-item>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Latitude</ion-label>
+          <ion-input [(ngModel)]="cadastroAssociacao.latitude"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Longitude</ion-label>
+          <ion-input [(ngModel)]="cadastroAssociacao.longitude"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <!--
+    <ion-item>
+      <ion-label position="stacked">Cidade</ion-label>
+      <ion-input [(ngModel)]="cadastroAssociacao.cidade"></ion-input>
+    </ion-item>
+-->
+    <div style="text-align: center;" *ngIf="!btnAtualizar">
+      <ion-button style="text-transform: none;" class="bg-colorToolbarAzul" (click)="salvar()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Salvar
+      </ion-button>
+    </div>
+    <div style="text-align: center;" *ngIf="btnAtualizar">
+      <ion-button style="text-transform: none;" class="bg-colorToolbarAzul" (click)="atualizar()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Atualizar
+      </ion-button>
+      <br>
+      <ion-button style="text-transform: none;" (click)="clearMap()">
+        Clear Map
+      </ion-button>
+    </div>
+
+
+
+  </ion-card>
+
+</ion-content>

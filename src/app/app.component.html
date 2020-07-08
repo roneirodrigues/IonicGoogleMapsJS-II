@@ -1,0 +1,33 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu style="opacity: .95;" contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+
+          <div class="titleMenu background-i">
+            <img style="padding: 20px 25px 7px 25px" src="../../assets/logo72.png">
+            <div style="text-align: center;">
+
+            </div>
+            <p style="padding: 0% 5%; white-space: nowrap; color: #FF0;">Bem Vindo,</p>
+          </div>
+
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="bg-color">
+        <ion-list class="bg-colorW">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of pgMenu">
+            <ion-item class="bg-color colorGrey" [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+
+                {{ p.title }}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

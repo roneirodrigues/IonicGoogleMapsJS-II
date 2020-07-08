@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar class="bg-colorToolbarVermelho">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" size="large"></ion-back-button>
+    </ion-buttons>
+
+
+    <ion-title slot="end">
+      Ponto de Auxílio
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon size="large" name="restaurant-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Pesquisar" [(ngModel)]="searchItem" (ionChange)="seachItems()">
+  </ion-searchbar>
+
+    <ion-item>
+      <ion-label>
+        <small>Ponto</small>
+      </ion-label>
+      <ion-select multiple="true"  (ionChange)="selectItem($event)">
+        <ion-select-option *ngFor="let ptAux of pontodeAuxilio" [value]="ptAux.nome">{{ptAux.nome}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+
+  <div id="map_canvas2"></div>
+
+
+  <div >
+    <ion-card (click)="onClick(item)" *ngFor="let item of pontodeAuxilioShow ">
+
+      <ion-item class="bg-colorToolbarVermelho">
+        <ion-row>
+          <ion-col size="12">
+            <ion-label position="stacked"><b>Nome</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.nome}}</small></ion-input>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <ion-label position="stacked"><b>Endereço</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.endereco}}</small></ion-input>
+          </ion-col>
+          <ion-col size="4">
+
+            <ion-label position="stacked"><b>Nro</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.nro}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <ion-label position="stacked"><b>Complemento</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.complemento}}</small></ion-input>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <ion-label position="stacked"><b>Cidade</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.cidade}}</small></ion-input>
+          </ion-col>
+          <ion-col size="4">
+            <ion-label position="stacked"><b>UF</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.uf}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <ion-label position="stacked"><b>Latitude</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.latitude}}</small></ion-input>
+          </ion-col>
+          <ion-col size="4">
+
+            <ion-label position="stacked"><b>Longitude</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.longitude}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-card>
+  </div>
+
+</ion-content>

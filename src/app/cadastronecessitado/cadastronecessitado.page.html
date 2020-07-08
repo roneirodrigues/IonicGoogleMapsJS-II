@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar class="bg-colorToolbarVerde">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" size="large"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end"> Cadastro Necessitado
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon size="large" name="person-add-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-colorVerde">
+
+  <ion-grid>
+    <ion-row justify-content-around>
+      <ion-col style="text-align: center;">
+        <ion-icon class="sIcon" color="success" name="person-add-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input [(ngModel)]="cadastroNecessitado.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">CPF</ion-label>
+      <ion-input [(ngModel)]="cadastroNecessitado.cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">RG</ion-label>
+      <ion-input [(ngModel)]="cadastroNecessitado.rg"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Origem</ion-label>
+      <ion-input [(ngModel)]="cadastroNecessitado.origem"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <p>UF</p>
+      </ion-label>
+      <ion-select [(ngModel)]="cadastroNecessitado.uf" (ionChange)="selectCidade(cadastroNecessitado.uf)">
+        <ion-select-option *ngFor="let est of ufShow" [value]="est.estado">{{est.uf}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div style="padding: 10px 15px 0px 16px">
+      <small>Cidade</small>
+      <input [(ngModel)]="cadastroNecessitado.cidade" class="iptDisabled pksInput" list="browsers" name="browser" [disabled]="!cadastroNecessitado.uf">
+
+      <datalist id="browsers">
+        <option *ngFor="let item of cidadesShow">{{item.cidade}}</option>
+      </datalist>
+    </div>
+    <hr color="#dedede">
+
+    <div style="padding: 10px 15px 0px 16px">
+      <small>Ponto de Auxílio</small>
+      <input [(ngModel)]="cadastroNecessitado.pontodeAuxilio" (focus)="selectPontodeAuxilio()" class="iptDisabled pksInput"
+        list="pontoAuxilioList" name="pontoAuxilioList" [disabled]="!cadastroNecessitado.cidade">
+
+      <datalist id="pontoAuxilioList">
+        <option *ngFor="let ponto of pontodeAuxilioShow">{{ponto.nome}}</option>
+      </datalist>
+    </div>
+    <hr color="#dedede">
+
+
+    <ion-item>
+      <ion-label position="stacked">Observações</ion-label>
+      <ion-textarea [(ngModel)]="cadastroNecessitado.observacoes" rows="6" cols="20">
+      </ion-textarea>
+    </ion-item>
+    <div style="text-align: center;" *ngIf="!btnAtualizar">
+      <ion-button style="text-transform: none;" class="bg-colorToolbarVerde" (click)="salvar()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Salvar
+      </ion-button>
+    </div>
+    <div style="text-align: center; " *ngIf="btnAtualizar">
+      <ion-button style="text-transform: none;" class="bg-colorToolbarVerde" (click)="atualizar()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Atualizar
+      </ion-button>
+    </div>
+  </ion-card>
+
+</ion-content>

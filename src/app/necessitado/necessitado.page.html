@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar class="bg-colorToolbarVerde">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" size="large"></ion-back-button>
+    </ion-buttons>
+
+
+    <ion-title slot="end">
+      Necessitado
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon size="large" name="restaurant-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="bg-color">
+    <ion-searchbar placeholder="Pesquisar" [(ngModel)]="searchItem" (ionChange)="seachItems()">
+    </ion-searchbar>
+  <div *ngFor="let item of necessitadoShow ">
+    <ion-card (click)="onClick(item)">
+
+      <ion-item class="bg-colorToolbarVerde">
+        <ion-row>
+          <ion-col size="12">
+            <ion-label position="stacked"><b>Nome</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.nome}}</small></ion-input>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-label position="stacked"><b>CPF</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.cpf}}</small></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-label position="stacked"><b>RG</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.rg}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-label position="stacked"><b>Origem</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.origem}}</small></ion-input>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <ion-label position="stacked"><b>Cidade</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.cidade}}</small></ion-input>
+          </ion-col>
+          <ion-col size="4">
+            <ion-label position="stacked"><b>UF</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.uf}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-label position="stacked"><b>Ponto de Auxilio</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.pontodeAuxilio}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-label position="stacked"><b>Observações</b></ion-label>
+            <ion-input [disabled]="true"><small>{{item.observacoes}}</small></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,562 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+input.iptDisabled:disabled {
+    background-color: #efecec;
+}
+
+
+.pksInput {
+    width: 100%;
+    height: 26px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 50px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    border: 0;
+}
+
+.alertCancel {
+    --background: red;
+}
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row .datatable-body-cell {
+    text-align: center;
+    padding: 0.5rem 1.2rem;
+    vertical-align: top;
+}
+
+.ngx-datatable.bootstrap .datatable-header .datatable-header-cell {
+    text-align: center;
+    padding: 0.5rem 1.2rem;
+    font-weight: bold;
+}
+
+.bgColorRedClean {
+    background-color: rgba(255, 100, 132, 0.5);
+}
+
+.bgColorAzulClean {
+    background-color: rgba(56, 128, 255, 0.5);
+}
+
+.colorDanger {
+    color: #ff4444;
+}
+
+.colorPrimary {
+    color: #3880ff;
+}
+
+.bg-colorSilver {
+    background-color: rgb(224, 224, 224);
+}
+.cardDetalhe {
+    padding: 4px;
+    line-height: 0.9;
+}
+
+.cardDetalheL {
+    padding: 4px 80px 4px 80px;
+    line-height: 0.9;
+}
+
+.alertClassx {
+    color: red;
+}
+
+.notification {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.notification .badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    background-color: #ff4444;
+    color: white;
+    font-size: 12px;
+}
+
+.labelGrey {
+    --ion-color-primary: #3880ff;
+}
+
+.colorGrey {
+    color: #666;
+}
+
+.bgVerde {
+    background-color: #00c851;
+    color: white;
+}
+.bgLaranja {
+    text-transform: none;
+    background-color: #ffbb33;
+}
+
+.bgVermelho {
+    text-transform: none;
+    background-color: #ff4444;
+}
+
+.xMax {
+    font-size: 17px;
+    font-family: "system-ui", sans-serif;
+    color: #666;
+
+    font-weight: bold;
+    text-align: center;
+}
+
+.xMed {
+    font-size: 13px;
+    font-family: "system-ui", sans-serif;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+}
+
+.xMin {
+    font-size: 10px;
+    font-family: "system-ui", sans-serif;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btnCinza {
+    --background: rgb(165, 165, 165);
+    color: white;
+}
+
+.btnC2 {
+    --background: #405bc2;
+}
+.btnTop {
+    margin-top: 20px;
+}
+
+.bg-colorW {
+    background: #f7f5ef;
+    --background: #f7f5ef;
+}
+
+.bg-colorWhite {
+    background-color: #fff;
+}
+
+.bg-colorBlack {
+    --background: #000;
+}
+
+.bg-color {
+    background: #edf1ed;
+    --background: #edf1ed;
+}
+.bg-colorVerde {
+    background: #a3e5be69;
+    --background: #a3e5be69;
+}
+
+.bg-colorToolbarVerde {
+    background: #2dd36f;
+    --background: #2dd36f;
+    color: #fff;
+}
+
+.bg-colorAzul {
+    background: #8fb8ffa6;
+    --background: #8fb8ffa6;
+}
+
+.bg-colorToolbarAzul {
+    background: #4285f4;
+    --background: #4285f4;
+    color: #fff;
+}
+.bg-colorVermelho {
+    background: #f49ca757;
+    --background: #f49ca757;
+}
+
+.bg-colorToolbarVermelho {
+    background: #eb445a;
+    --background: #eb445a;
+    color: #fff;
+}
+
+.bg-colorAzulClaro {
+    background: #8ab4fe;
+    --background: #8ab4fe;
+}
+.colorGrey {
+    color: #464644;
+}
+.bg-colorB {
+    background: #33b5e5;
+    --background: #33b5e5;
+    text-align: center;
+    color: #fff;
+}
+
+.bgToolbar {
+    --background: #33b3e2;
+    background: #33b3e2;
+    // --background: url("./assets/toolbar.jpg") center / 100%;
+    color: #fff;
+    text-align: center;
+}
+.ftFamStUI {
+    font-family: "system-ui";
+}
+
+.btnPading {
+    padding: 10px;
+}
+.btnPading8 {
+    padding: 8px;
+}
+
+.btnTexPading {
+    padding: 0 10px 0 10px;
+    text-transform: none;
+}
+.btnT {
+    text-transform: none;
+    --background: #33b5e5;
+    margin-top: 20px;
+}
+.btnTB {
+    text-transform: none;
+    --background: #33b5e5;
+}
+.btnAzul {
+    text-transform: none;
+    --background: #33b5e5;
+}
+
+.btnLaranja {
+    text-transform: none;
+    --background: #ffae00;
+}
+.btnCancelar {
+    text-transform: none;
+    --background: #ff4444;
+}
+.btnInserir {
+    text-transform: none;
+    --background: #aa66cc;
+}
+.bgSalmon {
+    background-color: #ffb1c1;
+}
+.btnExcluir {
+    text-transform: none;
+    --background: #ffbb33;
+}
+.btnSalvar {
+    text-transform: none;
+    --background: #00c851;
+}
+
+.label1 {
+    font-family: "system-ui", sans-serif;
+    color: #666;
+    font-size: 14px;
+}
+.label2 {
+    font-family: "system-ui", sans-serif;
+    color: #666;
+    font-size: 17px;
+}
+.inputRight {
+    text-align: right;
+}
+.borderRadius7 {
+    border-radius: 7px;
+}
+
+.btnC1 {
+    text-transform: none;
+    --background: #33b5e5;
+}
+.sIcon {
+    font-size: 4em;
+}
+.bg-card {
+    background: #fff;
+}
+
+.inputBorder {
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 20px;
+}
+.ionSelect100 {
+    max-width: 100% !important;
+}
+
+.btnTxtTransform {
+    text-transform: none;
+}
+
+.btnWid40 {
+    width: 40%;
+}
+
+//***** Modal Início
+
+.modal-open {
+    overflow: hidden;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal {
+    position: fixed;
+    top: 0px;
+    padding-top: 90px;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+.modal.fade .modal-dialog {
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+        transition: none;
+    }
+}
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+}
+.modal.modal-static .modal-dialog {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+.modal-dialog-scrollable {
+    display: -ms-flexbox;
+    display: flex;
+    max-height: calc(100% - 1rem);
+}
+.modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 1rem);
+    overflow: hidden;
+}
+.modal-dialog-scrollable .modal-footer,
+.modal-dialog-scrollable .modal-header {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+}
+.modal-dialog-centered {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+.modal-dialog-centered::before {
+    display: block;
+    height: calc(100vh - 1rem);
+    content: "";
+}
+.modal-dialog-centered.modal-dialog-scrollable {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+}
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+    max-height: none;
+}
+.modal-dialog-centered.modal-dialog-scrollable::before {
+    content: none;
+}
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    font-family: "Roboto Condensed", sans-serif;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+.modal-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    color: #666;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+.modal-header .close {
+    margin: -1rem -1rem -1rem auto;
+}
+.modal-title {
+    margin-bottom: 0;
+    line-height: 0.2;
+}
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    color: #666;
+    padding: 1rem;
+}
+.modal-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-bottom: 0.75rem;
+    padding-right: 0.75rem;
+    font-family: "Roboto Condensed", sans-serif;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+}
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+@media (min-width: 300px) {
+    .modal-dialog {
+        max-width: 300px;
+        margin: 1.75rem auto;
+    }
+    .modal-dialog-scrollable {
+        max-height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-scrollable .modal-content {
+        max-height: calc(100vh - 3.5rem);
+    }
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-centered::before {
+        height: calc(100vh - 3.5rem);
+    }
+    .modal-sm {
+        max-width: 50px;
+    }
+}
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px;
+    }
+}
+//***** Modal Fim

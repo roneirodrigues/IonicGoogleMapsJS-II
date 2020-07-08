@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar class="bg-colorToolbarVermelho">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" size="large"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end"> Cadastro Ponto Auxílio
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon size="large" name="location-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div *ngIf="parametro == 'Atualizar'" id="map_canvas1"></div>
+
+
+  <ion-grid *ngIf="parametro != 'Atualizar'">
+    <ion-row justify-content-around>
+      <ion-col style="text-align: center;">
+        <ion-icon class="sIcon" color="danger" name="location-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">Auxilio</ion-label>
+      <ion-input [(ngModel)]="cadastroPontodeAuxilio.auxilio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input [(ngModel)]="cadastroPontodeAuxilio.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Endereço</ion-label>
+      <ion-input [(ngModel)]="cadastroPontodeAuxilio.endereco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nro</ion-label>
+      <ion-input [(ngModel)]="cadastroPontodeAuxilio.nro"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Complemento</ion-label>
+      <ion-input [(ngModel)]="cadastroPontodeAuxilio.complemento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <small>UF</small>
+      </ion-label>
+      <ion-select [(ngModel)]="cadastroPontodeAuxilio.uf" (ionChange)="selectCidade(cadastroPontodeAuxilio.uf)">
+        <ion-select-option *ngFor="let est of ufShow" [value]="est.estado">{{est.uf}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div style="padding: 10px 15px 0px 16px">
+      <small>Cidade</small>
+      <input [(ngModel)]="cadastroPontodeAuxilio.cidade" class="iptDisabled pksInput" list="browsers" name="browser"
+        [disabled]="!cadastroPontodeAuxilio.uf">
+      <datalist id="browsers">
+        <option *ngFor="let item of cidadesShow">{{item.cidade}}</option>
+      </datalist>
+    </div>
+    <hr color="#dedede">
+
+    <ion-item>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Latitude</ion-label>
+          <ion-input [(ngModel)]="cadastroPontodeAuxilio.latitude"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Longitude</ion-label>
+          <ion-input [(ngModel)]="cadastroPontodeAuxilio.longitude"></ion-input>
+        </ion-col>
+
+      </ion-row>
+    </ion-item>
+
+    <div style="text-align: center;" *ngIf="!btnAtualizar">
+      <ion-button style="text-transform: none;" class="bg-colorToolbarVermelho" (click)="salvar()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Salvar
+      </ion-button>
+    </div>
+
+    <div style="text-align: center;" *ngIf="btnAtualizar">
+      <ion-button style="text-transform: none;" class="bg-colorToolbarVermelho" (click)="atualizar()">
+        <ion-icon slot="start" name="add"></ion-icon>
+        Atualizar
+      </ion-button>
+
+    </div>
+
+
+
+  </ion-card>
+
+</ion-content>
