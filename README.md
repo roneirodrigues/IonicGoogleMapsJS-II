@@ -3,7 +3,9 @@ Ionic Google MapsJS II - Circle, Polygon and Makers
 
 # Note
 Register People to Help
+
 Register Charitable Associations
+
 Register Help Location
 
 # Ionic Info
