@@ -33,6 +33,8 @@ name="GOOGLE_MAPS_ANDROID_API_KEY" value="(ENTER YOUR KEY HERE)"
 name="GOOGLE_MAPS_IOS_API_KEY" value="(ENTER YOUR KEY HERE)"
 
 # Commands
-npm install 
+1º npm install 
 
-ionic serve
+2º ionic cordova platform add android
+
+3º ionic cordova emulate android
