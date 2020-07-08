@@ -1,5 +1,5 @@
 # Ionic Google MapsJS II
-Ionic Google MapsJS II - Circle, Polygon and Makers
+Ionic Google MapsJS II - Circle, Polygon and Marker
 
 # Note
 Register People to Help
